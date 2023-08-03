@@ -2006,10 +2006,10 @@ CREATE TABLE `clipping_region_item` (
   `cli_caption` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Texto descriptivo (Ej. Catamarca).',
   `cli_geometry` geometry NOT NULL COMMENT 'Forma que define al ítem.',
   `cli_geometry_r1` geometry NOT NULL,
-  `cli_geometry_r2` geometry NOT NULL,
-  `cli_geometry_r3` geometry NOT NULL,
+  `cli_geometry_r2` geometry,
+  `cli_geometry_r3` geometry,
   `cli_centroid` point NOT NULL COMMENT 'Centroide del ítem.',
-  `cli_area_m2` double NOT NULL COMMENT 'Area en m2.',
+  `cli_area_m2` double COMMENT 'Area en m2.',
   `cli_wiki` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 CHECKSUM=1 COLLATE=utf8_unicode_ci;
 
